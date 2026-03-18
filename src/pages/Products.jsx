@@ -83,6 +83,7 @@ export default function Products() {
 
   return (
     <Container>
+    <h1 style={{ textAlign: 'left', margin: '20px 0' }}>Products</h1>
       <Box display='flex' gap={2} flexWrap='wrap' mb={2} mt={2}>
         <TextField
           label='Search Product'
