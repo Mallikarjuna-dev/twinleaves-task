@@ -3,7 +3,7 @@ import { DataGrid } from '@mui/x-data-grid'
 import { Container, Paper, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { getProducts } from '../api/productApi'
-import Loader from '../components/Loader'
+// import Loader from '../components/Loader'
 import Error from '../components/Error'
 import Filters from '../components/Filters'
 
@@ -98,7 +98,7 @@ export default function Products() {
   if (error) return <Error msg={error} />
 
   return (
-    <Container sx={{ width: '90%', mt: 4 }}>
+    <Container>
       <Typography variant='h4' sx={{ mt: 3, mb: 2 }}>
         Product Catalog
       </Typography>
