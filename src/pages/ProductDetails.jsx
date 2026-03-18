@@ -14,11 +14,15 @@ export default function ProductDetails() {
   if (!data) return <Loader />
 
   return (
-    <div style={{ padding: 20 }}>
-      <img src={data.image} width='200' />
+    <div style={{ padding: 30, maxWidth: 500, margin: 'auto' }}>
+      <img
+        src={data.image}
+        width='250'
+        style={{ display: 'block', marginBottom: 20 }}
+      />
       <h2>{data.name}</h2>
-      <h3>₹ {data.price}</h3>
-      <p>{data.description}</p>
+      <h3 style={{ color: 'green' }}>₹ {data.price}</h3>
+      <p style={{ lineHeight: 1.6 }}>{data.description}</p>
     </div>
   )
 }

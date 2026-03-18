@@ -5,7 +5,7 @@ const mockProducts = Array.from({ length: 100 }, (_, i) => ({
   name: `Product ${i + 1}`,
   category: i % 2 === 0 ? 'electronics' : 'fashion',
   price: Math.floor(Math.random() * 5000) + 500,
-  image: 'https://via.placeholder.com/80',
+  image: 'https://via.placeholder.com/100',
   description: 'Demo description',
 }))
 
