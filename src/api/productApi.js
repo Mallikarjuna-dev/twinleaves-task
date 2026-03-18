@@ -6,7 +6,7 @@ const mockProducts = Array.from({ length: 100 }, (_, i) => ({
   category: i % 2 === 0 ? 'electronics' : 'fashion',
   price: Math.floor(Math.random() * 5000) + 500,
   image: 'https://via.placeholder.com/100',
-  description: 'Demo description',
+  description: 'Demo description for product ' + (i + 1),
 }))
 
 const BASE_URL =

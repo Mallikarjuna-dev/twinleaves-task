@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { getProductById } from '../api/productApi'
 import Loader from '../components/Loader'
 
 export default function ProductDetails() {
   const { id } = useParams()
+  const navigate = useNavigate()
+
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -15,6 +17,17 @@ export default function ProductDetails() {
 
   return (
     <div style={{ padding: 30, maxWidth: 500, margin: 'auto' }}>
+      <button
+        onClick={() => navigate('/')}
+        style={{
+          marginBottom: 20,
+          padding: '6px 12px',
+          cursor: 'pointer',
+          borderRadius: 6,
+        }}
+      >
+        ← Back to Products
+      </button>
       <img
         src={data.image}
         width='250'
